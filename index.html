@@ -16,9 +16,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css?v=2">
 </head>
 <body>
+<a class="skip" href="#mandates">Skip to open mandates</a>
 
 <div class="ticker" aria-hidden="true"><div class="ticker-in" id="ticker"></div></div>
 
@@ -32,7 +33,7 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="kicker">Private mandate board · India &amp; United States</span>
+    <span class="kicker kicker-pill"><i></i>Private mandate board · India &amp; United States</span>
     <h1 class="display">Verified mandates.<br><em>Introductions on paper.</em></h1>
   </div>
   <div class="wrap hero-grid">
@@ -110,7 +111,7 @@
     </div>
     <div class="panel">
       <form class="form" id="form-interest">
-        <div class="field full"><label>I am a</label><div class="roles" role="radiogroup"><label><input type="radio" name="role" value="Buyer" checked><span>Buyer</span></label><label><input type="radio" name="role" value="Investor"><span>Investor</span></label><label><input type="radio" name="role" value="Lender"><span>Lender</span></label><label><input type="radio" name="role" value="Mandated advisor"><span>Mandated advisor</span></label></div></div>
+        <div class="field full"><label>I am a</label><div class="roles" role="radiogroup" aria-label="I am a"><label><input type="radio" name="role" value="Buyer" checked><span>Buyer</span></label><label><input type="radio" name="role" value="Investor"><span>Investor</span></label><label><input type="radio" name="role" value="Lender"><span>Lender</span></label><label><input type="radio" name="role" value="Mandated advisor"><span>Mandated advisor</span></label></div></div>
         <div class="field full"><label for="f-ref">Mandate</label><select class="input" id="f-ref"></select></div>
         <div class="field"><label for="f-name">Full name <i>*</i></label><input class="input" id="f-name" required placeholder="As on your ID" autocomplete="name"></div>
         <div class="field"><label for="f-org">Organisation</label><input class="input" id="f-org" placeholder="Entity investing"></div>
@@ -162,7 +163,7 @@
 
 <div class="dlg-back" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-title">
   <div class="dlg" id="dlg-box">
-    <button class="x" type="button" id="dlg-x" aria-label="Close">✕</button>
+    <button class="x" type="button" id="dlg-x" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <div class="dlg-in">
       <div class="card-top" style="justify-content:flex-start;gap:16px"><span class="cat" id="dlg-cat"></span><span class="ref" id="dlg-ref"></span></div>
       <h3 id="dlg-title"></h3>
@@ -177,6 +178,6 @@
 
 <script src="/data/config.js"></script>
 <script src="/data/mandates.js"></script>
-<script src="/assets/app.js"></script>
+<script src="/assets/app.js?v=2"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@
     const list = ALL.filter(m => cat === 'All' || m.cat === cat);
     $('#grid').innerHTML = list.length ? list.map((m, i) => {
       const feat = i === 0 && cat === 'All';
-      return `<article class="card ${feat ? 'feature' : ''}" tabindex="0" data-ref="${esc(m.ref)}" style="--cat:${catColor(m.cat)}">
+      return `<article class="card ${feat ? 'feature' : ''}" tabindex="0" role="button" aria-label="View mandate ${esc(m.ref)}: ${esc(m.title)}" data-ref="${esc(m.ref)}" style="--cat:${catColor(m.cat)}">
   <div class="card-in">
     <div class="card-top"><span class="cat">${esc(m.cat)}</span><span class="ref">${esc(m.ref)}</span></div>
     <h3>${esc(m.title)}</h3>
